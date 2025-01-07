@@ -1,0 +1,17 @@
+flask==2.2.5
+flask-session
+Flask-Cors
+torch
+transformers
+numpy
+pandas
+scikit-learn
+Pillow
+opencv-python
+typing
+SpeechRecognition
+moviepy==1.0.3
+pytesseract
+pyaudio
+soundfile
+whisper
