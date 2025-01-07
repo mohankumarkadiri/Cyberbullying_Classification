@@ -2,6 +2,23 @@
 
 To view the demo, [click here](https://github.com/kadirikumar-uptycs/Cyberbullying_Classification/blob/main/result.mp4) to download and play the video locally.
 
+## Current Features
+
+1. Text Extraction from Image ✅, Audio ✅ and Video ⌛(Not fully done).
+
+   ![1736272562002](image/README/1736272562002.png)
+2. Identify cyberbullying from the uploaded Text or File.
+
+   ![1736272787043](image/README/1736272787043.png)
+
+   ![1736272617053](image/README/1736272617053.png)
+
+### Allowed File Formats
+
+1. Image - `jpg`, `jpeg`, `png`, `bmp`, `tiff`
+2. Audio - `wav`, `mp3`, `ogg`, `flac` (but only .wav is working as of now)
+3. video - `mp4`, `avi`, `mov`, `mkv` (Not completed fully, you might get errors)
+
 ## Backend Setup
 
 ### Requirements
