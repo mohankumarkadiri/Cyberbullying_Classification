@@ -1,5 +1,7 @@
 # Cyberbullying Detection using BERT
 
+To view the demo, [click here](https://github.com/kadirikumar-uptycs/Cyberbullying_Classification/blob/main/result.mp4) to download and play the video locally.
+
 ## Backend Setup
 
 ### Requirements
