@@ -5,14 +5,12 @@ import CameraEnhanceIcon from '@mui/icons-material/CameraEnhance';
 import ImageSearchIcon from '@mui/icons-material/ImageSearch';
 import CustomTooltip from '../common/CustomTooltip';
 import assets from '../assets';
-import ConfirmationSnackBar from '../common/ConfirmationSnackBar';
 import './SideBar.css';
 
 
 const SideBar = ({ onToggle }) => {
 
     const [sideBarOpen, setSideBarOpen] = useState(false);
-    const [open, setOpen] = useState(false);
 
     const pages = [
         {

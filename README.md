@@ -4,9 +4,10 @@ To view the demo, [click here](https://github.com/kadirikumar-uptycs/Cyberbullyi
 
 ## Current Features
 
-1. Text Extraction from Image ✅, Audio ✅ and Video ⌛(Not fully done).
+1. Text Extraction from Image ✅, Audio ✅ and Video ✅.
 
    ![1736272562002](image/README/1736272562002.png)
+
 2. Identify cyberbullying from the uploaded Text or File.
 
    ![1736272787043](image/README/1736272787043.png)
@@ -15,9 +16,9 @@ To view the demo, [click here](https://github.com/kadirikumar-uptycs/Cyberbullyi
 
 ### Allowed File Formats
 
-1. Image - `jpg`, `jpeg`, `png`, `bmp`, `tiff`
-2. Audio - `wav`, `mp3`, `ogg`, `flac` (but only .wav is working as of now)
-3. video - `mp4`, `avi`, `mov`, `mkv` (Not completed fully, you might get errors)
+1. Image - `jpg`, `jpeg`, `png`, `bmp`, `tiff` etc...
+2. Audio - `wav`, `mp3`, `ogg`, `flac` etc...
+3. video - `mp4`, `avi`, `mov`, `mkv` etc..
 
 ## Backend Setup
 
@@ -25,6 +26,22 @@ To view the demo, [click here](https://github.com/kadirikumar-uptycs/Cyberbullyi
 
 - Python 3.8+
 - pip (Python package installer)
+- flask==2.2.5
+- Flask-Cors
+- torch
+- transformers
+- numpy
+- pandas
+- scikit-learn
+- Pillow
+- opencv-python
+- typing
+- SpeechRecognition
+- moviepy==1.0.3
+- pytesseract
+- pyaudio
+- soundfile
+- whisper
 
 ### Dependencies
 
@@ -32,10 +49,12 @@ To view the demo, [click here](https://github.com/kadirikumar-uptycs/Cyberbullyi
 
    - Download the weights file from Google Drive: [weights.pth](https://drive.google.com/file/d/1JJbCi_bk_65H1uu3ge2o68IGFAXjsjdM/view?usp=sharing).
    - Move the downloaded `weights.pth` file to the `backend\app\weights` folder.
+
 2. **Download and Install Tesseract**
 
    - Download the Tesseract installer from this [link](https://github.com/UB-Mannheim/tesseract/wiki).
    - Install Tesseract and add the installation directory to your system's PATH.
+
 3. **Download FFmpeg**
 
    - Visit [FFmpeg Downloads](https://ffmpeg.org/download.html) and choose Windows builds or just download from [Link](https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip).
@@ -50,6 +69,7 @@ To view the demo, [click here](https://github.com/kadirikumar-uptycs/Cyberbullyi
    ```sh
    cd backend
    ```
+
 2. Install the required packages:
 
    ```sh
@@ -71,6 +91,9 @@ To view the demo, [click here](https://github.com/kadirikumar-uptycs/Cyberbullyi
 
 - Node.js
 - npm (Node package manager)
+- MUI
+- react-router-dom
+- framer-motion
 
 ### Installation
 
@@ -79,6 +102,7 @@ To view the demo, [click here](https://github.com/kadirikumar-uptycs/Cyberbullyi
    ```sh
    cd frontend
    ```
+
 2. Install the required packages:
 
    ```sh
@@ -92,6 +116,7 @@ To view the demo, [click here](https://github.com/kadirikumar-uptycs/Cyberbullyi
    ```sh
    npm start
    ```
+
 2. Open [http://localhost:17293](http://localhost:17293) to view it in your browser.
 
 ## License
