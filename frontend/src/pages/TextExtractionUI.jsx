@@ -11,7 +11,7 @@ import {
     Button,
 } from '@mui/material';
 import { motion } from 'framer-motion';
-import { UploadFile, Description } from '@mui/icons-material';
+import { UploadFile, Description, VideoFile, AudioFile } from '@mui/icons-material';
 import { useSnackbar } from '../hooks/SnackBarProvider';
 import { useDispatch } from 'react-redux';
 import { setCurrentPage } from '../store/authSlice';
@@ -20,6 +20,7 @@ import axios from 'axios';
 const TextExtractionUI = () => {
     const [file, setFile] = useState(null);
     const [extractedText, setExtractedText] = useState('');
+    const [predictionresponse, setPredictionResponse] = useState(null);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
     const [dragActive, setDragActive] = useState(false);
@@ -29,7 +30,7 @@ const TextExtractionUI = () => {
 
     useLayoutEffect(() => {
         dispatch(setCurrentPage('Text Extraction'));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const handleDrag = (e) => {
@@ -56,9 +57,11 @@ const TextExtractionUI = () => {
         try {
             const response = await axios.post('http://localhost:17291/api/predict', formData);
             setExtractedText(response?.data?.extracted_text);
+            setPredictionResponse(response?.data);
         } catch (error) {
             openSnackbar(error?.response?.data?.message || error?.response?.status, 'danger');
             console.log('Error:', error);
+            setPredictionResponse(null);
         } finally {
             setLoading(false);
         }
@@ -193,6 +196,76 @@ const TextExtractionUI = () => {
                                 </Card>
                             </Box>
                         )}
+
+                        {predictionresponse?.audio_text && !loading && (
+                            <Box mt={4}>
+                                <Card>
+                                    <CardHeader
+                                        avatar={<AudioFile color="success" />}
+                                        title="Extracted Text from Audio"
+                                        titleTypographyProps={{ variant: 'h6' }}
+                                        sx={{ bgcolor: 'background.paper' }}
+                                    />
+                                    <CardContent>
+                                        <Typography
+                                            variant="body1"
+                                            sx={{ whiteSpace: 'pre-wrap', maxHeight: 400, overflowY: 'auto' }}
+                                        >
+                                            {predictionresponse?.audio_text}
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                            </Box>
+                        )}
+
+                        {predictionresponse?.frame_texts && !loading && (
+                            <Box mt={4}>
+                                <Card>
+                                    <CardHeader
+                                        avatar={<VideoFile color="success" />}
+                                        title="Extracted Text from Video Frames"
+                                        titleTypographyProps={{ variant: 'h6' }}
+                                        sx={{ bgcolor: 'background.paper' }}
+                                    />
+                                    <CardContent>
+                                        <Typography
+                                            variant="body1"
+                                            sx={{ whiteSpace: 'pre-wrap', maxHeight: 400, overflowY: 'auto' }}
+                                        >
+                                            {predictionresponse?.frame_texts}
+                                        </Typography>
+                                    </CardContent>
+                                </Card>
+                            </Box>
+                        )}
+
+                        {
+                            predictionresponse && !loading && (
+                                <Box mt={4}>
+                                    <Typography
+                                        variant="h4"
+                                        mb={2}
+                                        style={{
+                                            fontWeight: 'bold',
+                                            textShadow: '2px 2px 4px rgba(202, 211, 24, 0.2)'
+                                        }}
+                                    >
+                                        Full Response
+                                    </Typography>
+
+                                    <pre
+                                        style={{
+                                            maxHeight: '400px',
+                                            overflowY: 'auto',
+                                            whiteSpace: 'pre-wrap',
+                                            fontSize: '13px',
+                                            scrollbarWidth: 'thin'
+                                        }}>
+                                        <code lang='language-json'>{JSON.stringify(predictionresponse, null, 8)}</code>
+                                    </pre>
+                                </Box>
+                            )
+                        }
                     </CardContent>
                 </Card>
             </Box>
