@@ -6,13 +6,18 @@ To view the demo, [click here](https://github.com/kadirikumar-uptycs/Cyberbullyi
 
 1. Text Extraction from Image ✅, Audio ✅ and Video ✅.
 
-   ![1736272562002](image/README/1736272562002.png)
+   ![1736526233102](image/README/1736526233102.png)
 
+   ![1736526140830](image/README/1736526140830.png)
+
+   ![1736526329163](image/README/1736526329163.png)
 2. Identify cyberbullying from the uploaded Text or File.
 
-   ![1736272787043](image/README/1736272787043.png)
+   ![1736525778632](image/README/1736525778632.png)
 
-   ![1736272617053](image/README/1736272617053.png)
+   ![1736525966867](image/README/1736525966867.png)
+
+   ![1736525875620](image/README/1736525875620.png)![1736525849256](image/README/1736525849256.png)
 
 ### Allowed File Formats
 
@@ -49,12 +54,10 @@ To view the demo, [click here](https://github.com/kadirikumar-uptycs/Cyberbullyi
 
    - Download the weights file from Google Drive: [weights.pth](https://drive.google.com/file/d/1JJbCi_bk_65H1uu3ge2o68IGFAXjsjdM/view?usp=sharing).
    - Move the downloaded `weights.pth` file to the `backend\app\weights` folder.
-
 2. **Download and Install Tesseract**
 
    - Download the Tesseract installer from this [link](https://github.com/UB-Mannheim/tesseract/wiki).
    - Install Tesseract and add the installation directory to your system's PATH.
-
 3. **Download FFmpeg**
 
    - Visit [FFmpeg Downloads](https://ffmpeg.org/download.html) and choose Windows builds or just download from [Link](https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip).
@@ -69,7 +72,6 @@ To view the demo, [click here](https://github.com/kadirikumar-uptycs/Cyberbullyi
    ```sh
    cd backend
    ```
-
 2. Install the required packages:
 
    ```sh
@@ -102,7 +104,6 @@ To view the demo, [click here](https://github.com/kadirikumar-uptycs/Cyberbullyi
    ```sh
    cd frontend
    ```
-
 2. Install the required packages:
 
    ```sh
@@ -116,7 +117,6 @@ To view the demo, [click here](https://github.com/kadirikumar-uptycs/Cyberbullyi
    ```sh
    npm start
    ```
-
 2. Open [http://localhost:17293](http://localhost:17293) to view it in your browser.
 
 ## License
