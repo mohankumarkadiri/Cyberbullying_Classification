@@ -26,6 +26,23 @@ To view the demo, [click here](https://github.com/kadirikumar-uptycs/Cyberbullyi
 - Python 3.8+
 - pip (Python package installer)
 
+### Dependencies
+
+1. **Download BERT Model Weights**
+
+   - Download the weights file from Google Drive: [weights.pth](https://drive.google.com/file/d/1JJbCi_bk_65H1uu3ge2o68IGFAXjsjdM/view?usp=sharing).
+   - Move the downloaded `weights.pth` file to the `backend\app\weights` folder.
+2. **Download and Install Tesseract**
+
+   - Download the Tesseract installer from this [link](https://github.com/UB-Mannheim/tesseract/wiki).
+   - Install Tesseract and add the installation directory to your system's PATH.
+3. **Download FFmpeg**
+
+   - Visit [FFmpeg Downloads](https://ffmpeg.org/download.html) and choose Windows builds or just download from [Link](https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip).
+   - Extract the downloaded zip file.
+   - Copy the extracted folder to `C:\ffmpeg`.
+   - Add `C:\ffmpeg\bin` to your system's PATH environment variable.
+
 ### Installation
 
 1. Navigate to the `backend` directory:
@@ -38,11 +55,6 @@ To view the demo, [click here](https://github.com/kadirikumar-uptycs/Cyberbullyi
    ```sh
    pip install -r requirements.txt
    ```
-3. Download and install Tesseract installer from: [Link](https://github.com/UB-Mannheim/tesseract/wiki) and add the installation directory to your system PATH
-4. Download BERT model weights from Google drive [weights.pth
-
-   ](https://drive.google.com/file/d/1JJbCi_bk_65H1uu3ge2o68IGFAXjsjdM/view?usp=sharing)
-5. Move the downloaded weights to `backend\app\weights` folder.
 
 ### Running the Backend
 

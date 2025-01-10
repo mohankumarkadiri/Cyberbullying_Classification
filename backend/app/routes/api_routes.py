@@ -55,10 +55,12 @@ def predict():
                 if not file_type:
                     return jsonify({"message": "Unsupported file type"}), 400
 
-                extracted_text, error = process_input(file_path, file_type)
+                result, error = process_input(file_path, file_type)
+                extracted_text = result.get("extracted_text", None)
+                input_text = extracted_text.replace("\n", " ") if extracted_text else None
 
                 print(f"Extracted text: {extracted_text}")
-                # os.remove(file_path)
+                os.remove(file_path)
 
                 if error:
                     print(f"⛔ Error processing file: {error}")
@@ -66,15 +68,14 @@ def predict():
                 if not extracted_text:
                     print("⛔ No text extracted")
                     return jsonify({"message": "No text extracted"}), 400
-                
-                
-                prediction, error = classify_text(extracted_text)
+
+                prediction, error = classify_text(input_text)
 
                 if error:
                     print(f"⛔ Error classifying text: {error}")
                     return jsonify({"message": str(error)}), 500
-                
-                prediction.update({"extracted_text": extracted_text})
+
+                prediction.update(**result)
 
                 return jsonify(prediction), 200
 

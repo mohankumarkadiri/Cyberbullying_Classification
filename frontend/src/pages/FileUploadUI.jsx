@@ -151,7 +151,7 @@ const FileUploadUI = () => {
                 />
             </Typography>
 
-            <Grid container spacing={3} sx={{ maxWidth: '100%', margin: '0 auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <Grid container spacing={3} sx={{ width: '100%', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
                 <Grid item sx={{ width: '50%' }}>
                     <Box sx={{ marginBottom: 3 }}>
                         <Box sx={{
