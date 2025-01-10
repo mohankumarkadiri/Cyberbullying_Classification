@@ -46,7 +46,7 @@ const SideBar = ({ onToggle }) => {
                     </Link>
                     <div className="text logo-text">
                         <span className="name">Cyber Space</span>
-                        <span className="college">College</span>
+                        <span className="college">VIEW</span>
                     </div>
                 </div>
                 <ChevronRightOutlined className='toggle' onClick={handleToggle} />
