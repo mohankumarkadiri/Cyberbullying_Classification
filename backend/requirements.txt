@@ -15,3 +15,5 @@ pytesseract
 pyaudio
 soundfile
 whisper
+dotenv
+pydub

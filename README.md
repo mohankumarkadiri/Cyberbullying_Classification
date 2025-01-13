@@ -57,7 +57,7 @@ To view the demo, [click here](https://github.com/kadirikumar-uptycs/Cyberbullyi
 2. **Download and Install Tesseract**
 
    - Download the Tesseract installer from this [link](https://github.com/UB-Mannheim/tesseract/wiki).
-   - Install Tesseract and add the installation directory to your system's PATH.
+   - Install Tesseract and add the installation directory (`C:\Program Files\Tesseract-OCR`) to your system's PATH.
 3. **Download FFmpeg**
 
    - Visit [FFmpeg Downloads](https://ffmpeg.org/download.html) and choose Windows builds or just download from [Link](https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip).
