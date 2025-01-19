@@ -8,7 +8,7 @@ class Config:
     FLASK_ENV = os.getenv('FLASK_ENV')
     MODEL_PATH = os.getenv('MODEL_PATH')
     UPLOAD_FOLDER = "app/static/uploads"
-    MAX_CONTENT_LENGTH = 16 * 1024 * 1024
+    MAX_CONTENT_LENGTH = 10 * 1024 * 1024
     UI_BASE_URL = os.getenv('UI_BASE_URL')
 
 class DevelopmentConfig(Config):
